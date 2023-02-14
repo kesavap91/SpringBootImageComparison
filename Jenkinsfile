@@ -4,14 +4,16 @@ pipeline {
     stages {
         stage('maven version check') {
             steps {
-            withMaven(){
+            git url: 'https://github.com/cyrille-leclerc/multi-module-maven-project'
+            withMaven{
              sh 'mvn --version'
             }
             }
         }
         stage('maven clean install') {
             steps {
-            withMaven(){
+            git url: 'https://github.com/cyrille-leclerc/multi-module-maven-project'
+            withMaven{
             sh 'mvn clean install'
             }
             }
