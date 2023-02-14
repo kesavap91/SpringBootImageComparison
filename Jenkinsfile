@@ -25,12 +25,5 @@ bat 'echo "s3 related steps"'
                     }
                     }
 
-
-                                stage('pull s3 bucket && deploy into aws') {
-                                    steps {
-               bat 'echo "aws pull from s3 and deploy"'
-                                    }
-                                    }
-
     }
 }
