@@ -7,10 +7,7 @@ pipeline {
 //             sh "ls -ltr"
 //             sh "./mvnw --version"
             git 'https://github.com/kesavap91/SpringBootImageComparison.git'
-            withMaven(){
             bat 'mvn --version'
-            }
-
             }
         }
         stage('maven clean install') {
