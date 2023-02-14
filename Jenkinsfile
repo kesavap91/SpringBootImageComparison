@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('maven version check') {
             steps {
-            withMaven(maven : 'maven_3.9.0'){
+            withMaven(){
              sh 'mvn --version'
             }
             }
         }
         stage('maven clean install') {
-                steps {
-                withMaven(maven : 'maven_3.9.0'){
-                 sh 'mvn clean install'
-                }
-                }
+            steps {
+            withMaven(){
+            sh 'mvn clean install'
             }
+            }
+        }
     }
 }
