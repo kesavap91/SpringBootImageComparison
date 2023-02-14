@@ -7,7 +7,7 @@ pipeline {
 //             sh "ls -ltr"
 //             sh "./mvnw --version"
             git 'https://github.com/kesavap91/SpringBootImageComparison.git'
-            withMaven {
+            withMaven(maven:'${MAVEN_HOME}') {
              bat 'mvn --version'
             }
 
