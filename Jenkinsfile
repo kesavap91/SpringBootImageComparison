@@ -4,10 +4,12 @@ pipeline {
     stages {
         stage('maven version check') {
             steps {
+            sh "ls -ltr"
+            sh "./mvnw --version"
             git 'https://github.com/kesavap91/SpringBootImageComparison.git'
-            withMaven(){
-                        sh 'mvn --version'
-            }
+//             withMaven(){
+//             sh 'mvn --version'
+//             }
 
             }
         }
