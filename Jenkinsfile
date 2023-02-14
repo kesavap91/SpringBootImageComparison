@@ -5,7 +5,10 @@ pipeline {
         stage('maven version check') {
             steps {
             git 'https://github.com/kesavap91/SpringBootImageComparison.git'
-            sh 'mvn --version'
+            withMaven(){
+                        sh 'mvn --version'
+            }
+
             }
         }
         stage('maven clean install') {
