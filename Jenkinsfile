@@ -5,7 +5,7 @@ pipeline {
         stage('maven version check') {
             steps {
             withMaven(maven:'MAVEN_HOME') {
-             sh 'mvn --version'
+             bat 'mvn --version'
             }
 
             }
@@ -13,7 +13,7 @@ pipeline {
         stage('maven clean install') {
             steps {
             withMaven(maven:'MAVEN_HOME') {
-            sh 'mvn clean install'
+            bat 'mvn clean install'
             }
             }
         }
